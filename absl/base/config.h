@@ -279,8 +279,8 @@ static_assert(ABSL_INTERNAL_INLINE_NAMESPACE_STR[0] != 'h' ||
 // Checks whether the `thread_local` storage duration specifier is supported.
 #ifdef ABSL_HAVE_THREAD_LOCAL
 #error ABSL_HAVE_THREAD_LOCAL cannot be directly set
-#elif !defined(__XTENSA__)
-#define ABSL_HAVE_THREAD_LOCAL 1
+// #elif !defined(__XTENSA__) && !defined(__nanvix__)
+// #define ABSL_HAVE_THREAD_LOCAL 1
 #endif
 
 // ABSL_HAVE_INTRINSIC_INT128
